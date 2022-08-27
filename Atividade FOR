@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class main {
+    public static void main(String[] args) {
+        Scanner bofao = new Scanner(System.in);
+        int numeroDigitado = bofao.nextInt();
+        for (int a = 0; a < numeroDigitado; a++){
+            int ePrimo = 0;
+            for (int b = 1; b <= a; b++){
+                if (a % b == 0) {
+                    ePrimo++;
+                }
+            }
+            if (ePrimo == 2) {
+                System.out.println(a);
+            }
+        }
+    }
+}
