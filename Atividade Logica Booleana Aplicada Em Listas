@@ -1,0 +1,15 @@
+    private void EditButtonActionPerformed(java.awt.event.ActionEvent evt) {                                           
+         String elemento = campoItem.getText();
+         if(verificaSeExiste(elemento) == false){
+            JOptionPane.showMessageDialog(this,"Este item não existe!");
+        }
+         else{
+             String novoValor;
+             novoValor = JOptionPane.showInputDialog(this,"Qual o novo valor?");
+             int pos = lista.indexOf(elemento);
+             lista.set(pos, novoValor);
+             campoItem.setText(null);
+             exibeLista();
+        }
+    }                  
+
